@@ -3,6 +3,31 @@
 	height: 180px;
 }
 
+.logo_img_text {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+  animation: 30s linear 0s normal none infinite running logo_img_text;
+  -webkit-animation: 30s linear 0s normal none infinite running logo_img_text;
+}
+/*поворот логотипа вокруг своей оси*/
+@keyframes logo_img_text {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes logo_img_text {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .logo {
 	margin-top: 130px;
 	display: flex;
