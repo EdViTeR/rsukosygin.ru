@@ -1,37 +1,6 @@
 body {
 	margin: 0;
-}
-
-
-.intro {
-	width: 100%;
-	height: 480px;
-	margin: 0 auto;
-	background-image:#588ffe;background-image:  
-	radial-gradient(at 100% 0%, hsla(213,100%,50%,1) 0, transparent 59%),  
-	radial-gradient(at 60% 16%, hsla(214,93%,53%,1) 0, transparent 50%),  
-	radial-gradient(at 60% 92%, hsla(176,40%,65%,1) 0, transparent 61%),  
-	radial-gradient(at 90% 100%, hsla(176,40%,65%,1) 0, transparent 30%),  
-	radial-gradient(at 13% 74%, hsla(15,96%,85%,1) 0, transparent 50%),  
-	radial-gradient(at 0% 0%, hsla(291,37%,70%,1) 0, transparent 50%),  
-	radial-gradient(at 2% 35%, hsla(342,78%,81%,1) 0, transparent 50%),  
-	radial-gradient(at 30% 100%, hsla(20,91%,84%,1) 0, transparent 50%),  
-	radial-gradient(at 0% 100%, hsla(28,91%,83%,1) 0, transparent 50%);;
-	-webkit-background-size: cover;
-	background-size: cover;
-}
-
-.header {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1000;
-}
-
-.header__logo {
-	width: 240px;
+	background: #E8F0F9;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,9 +10,169 @@ h1, h2, h3, h4, h5, h6 {
 *,
 *:before,
 *:after {
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+.container {
+	width: 100%;
+	max-width: 1720px;
+	margin: 0 auto;
+}
+
+.header {
+	background: #FFFFFF;
+	border-radius: 15px;
+	width: 1720px;
+	height: 110px;
+	margin-top: 30px;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	font-size: 30px;
+	font-weight: 700px;
+	color: #000000;
+}
+
+.nav {
+	font-size: 24px;
+	text-transform: capitalize;
+}
+
+.nav__link {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 35px;
+	position: relative;
+
+	color: #000000;
+	text-decoration: none;
+
+	transition: color 0.2s linear;
+}
+
+.nav__link:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+
+	background-color: #016AE7;
+	opacity: 0;
+
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+
+	transition: opacity 0.1s linear;
+}
+
+.nav__link:hover {
+	color: #016AE7;
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+	opacity: 1;
+}
+
+.nav__link.active {
+	color: #016AE7;
+}
+
+
+
+
+.rectangle {
+	position: absolute;
+	width: 1815px;
+	height: 670px;
+	left: 53px;
+	top: 210px;
+	background: rgba(7, 42, 167, 0.59);
+	border-radius: 15px;
+}
+
+.printer__logo {
+	position: absolute;
+	width: 473px;
+	height: 284px;
+	left: 1288px;
+	top: 145px;
+	
+	background: url(../../img/home/printer.png);
+}
+
+.rectangle_title {
+	position: absolute;
+	width: 862px;
+	height: 174px;
+	left: 142px;
+	top: 100px;
+	
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 77px;
+	
+	color: #000000;
+}
+
+.rectangle_text {
+	position: absolute;
+	width: 1129px;
+	height: 303px;
+	left: 120px;
+	top: 300px;
+	
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 39px;
+	
+	color: #000000;
+}
+
+.rectangle__button {
+	position: absolute;
+	width: 350px;
+	height: 80px;
+	left: 212px;
+	top: 520px;
+	background: rgba(7, 42, 167, 0.59);
+	border-radius: 5px;
+}
+
+.rectangle__button:hover {
+	background-color: #fff;
+	transition: 1s linear;
+}
+
+.rectangle__button:hover .rectangle__button__text {
+	color: #072AA7;
+}
+
+.rectangle__button__text {
+	position: absolute;
+	left: 30px;
+	top: 20px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 39px;
+	
+	color: #FFFFFF;
+}
+
 
 @font-face {
 	font-family: "GothamPro"; 
